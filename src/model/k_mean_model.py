@@ -79,9 +79,11 @@ class KMeansModel:
 		return y_pred
 
 	def fit(self):
+		self._centroids_updated=[]
+		self._labels_updated=[]
 		# khởi tạo random centroids
 		centroids = self._initialize_centroids()
-
+		count=2
 		# tạo vòng lặp
 		for iteration in range(self.max_iteration):
 
@@ -102,9 +104,11 @@ class KMeansModel:
 
 			# Kiểm tra sự khác biệt nếu không thì
 			if not diff.any():
-				# bỏ danh sách centroid mới nhất
-				self._centroids_updated = self._centroids_updated[:-1]
-				break
+				if count == 0:
+					# bỏ danh sách centroid mới nhất
+					self._centroids_updated = self._centroids_updated[:-1]
+					break
+				count -= 1
 
 		# lấy danh sách centroids cuối cùng của danh sách cập nhật centroid
 		self.centroids = self._centroids_updated[-1]

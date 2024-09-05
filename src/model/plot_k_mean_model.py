@@ -30,7 +30,6 @@ class PlotKMeans:
 		centroids_updated = model.get_centroids_updated()
 		label_updated = model.get_labels_updated()
 		for i in range(len(centroids_updated)):
-
 			centroids.update(dict(x = centroids_updated[i][:, 0], y = centroids_updated[i][:, 1]))
 
 			c += 1
@@ -44,7 +43,6 @@ class PlotKMeans:
 
 			colors = pd.Series(label_updated[i]).map(color_dict).values
 			points.update(dict(marker = dict(color = colors)))
-
 
 		# Build figure
 		layout['sliders'] = [sliders_dict]
@@ -61,6 +59,7 @@ class PlotKMeans:
 		                '#17becf']
 		color_dict = {i: color for i, color in enumerate(tab10_colors)}
 		return color_dict
+
 	def _get_layout_fig(self, velocidade):
 		layout = {"showlegend": False, "updatemenus": [
 			{
@@ -142,17 +141,13 @@ class PlotKMeans:
 		)
 		return slider_step
 
-	def plot_elbow(self, data, target_k, max_k, mode):
+	def plot_elbow(self, data, max_k, mode):
 
 		sse = []
-		model = None
 		for k in range(1, max_k + 1):
 
 			kmeans_model = KMeansModel(data, k, mode).fit()
 			curr_sse = 0
-
-			if k == target_k:
-				model = kmeans_model
 
 			for i in range(10):
 				centroid = kmeans_model.centroids[kmeans_model.labels[i]]
@@ -167,9 +162,9 @@ class PlotKMeans:
 				xaxis = dict({'title': 'k'}), yaxis = dict({'title': 'wss'})
 			)
 		)
-		return model, elbow_fig
+		return elbow_fig
 
-	def plot_silhouette(self, data, target_k, max_k, mode):
+	def plot_silhouette(self, data, max_k, mode):
 
 		silhouette_avg = []
 		model = None
@@ -178,12 +173,12 @@ class PlotKMeans:
 
 			kmeans_model = KMeansModel(data, k, mode).fit()
 
-			if k == target_k:
-				model = kmeans_model
-
 			# Tính silhouette score cho mô hình với k cụm
 			score = silhouette_score(data, kmeans_model.labels)
 			silhouette_avg.append(score)
+
+			if score >= max(silhouette_avg):
+				model = kmeans_model
 
 		silhouette_fig = go.Figure(
 			data = go.Scatter(x = list(range(2, max_k + 1)), y = silhouette_avg),

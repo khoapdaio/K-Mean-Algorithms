@@ -1,0 +1,1 @@
+Một kỹ thuật phổ biến để xác định số lượng cụm (K) tối ưu trong thuật toán K-Mean. Mục tiêu là tìm giá trị K sao cho tổng khoảng cách bình phương giữa các điểm dữ liệu và centroid của chúng là nhỏ nhất, nhưng đồng thời không tăng thêm quá nhiều khi tăng K.

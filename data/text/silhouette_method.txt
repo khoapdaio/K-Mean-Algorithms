@@ -1,0 +1,1 @@
+Average Silhouette Method là một kỹ thuật khác để xác định số lượng cụm (K) tối ưu trong thuật toán K-Means. Thay vì tập trung vào khoảng cách giữa các điểm dữ liệu và centroids như phương pháp khuỷu tay , Average Silhouette Method đánh giá mức độ tách biệt và đồng nhất của các cụm bằng cách sử dụng chỉ số Silhouette.
