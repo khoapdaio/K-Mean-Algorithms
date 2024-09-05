@@ -1,4 +1,4 @@
-# KNN algorithm
+# K-Mean Algorithms
 
 Website demo: https://knn-algorithm-dbibnlwgfsnvbjdclzwpru.streamlit.app/
 
