@@ -1,0 +1,10 @@
+K-Mean là một cách tiếp cận đơn giản và gọn gàng để phân vùng các mẫu dữ liệu thành các cụm “K” được xác định trước và không chồng chéo. Giá trị của K trong thuật toán K-Mean là phụ thuộc vào sự lựa chọn của người dùng. Nếu chúng ta sử dụng thuật toán K-Mean là để phân tách các mẫu dữ liệu thành 3 loại, chúng ta cần đề cập đến giá trị của K=3 trong mã của chúng ta.
+
+James MacQueen lần đầu tiên sử dụng thuật ngữ “K-Mean” vào năm 1967.Nó là một kỹ thuật cũ nhưng vẫn rất phổ biến trong ngành khoa học dữ liệu và máy học.
+
+Trong thuật toán K-Mean, mọi dữ liệu từ tập dữ liệu sẽ tuân theo hai thuộc tính cơ bản:
+
+1. Mỗi mẫu dữ liệu thuộc ít nhất 1 trong các cụm “K”. Nói một cách đơn giản, có thể có một mẫu không phải là một phần của bất kỳ cụm nào
+2. Không có mẫu dữ liệu sẽ thuộc về nhiều hơn một cụm. Nói một cách đơn giản, một mẫu không thể xuất hiện trong 2 hoặc nhiều cụm cùng một lúc
+
+Do tính đơn giản, mạnh mẽ tương đối của nó ( nó có thể hoạt động với nhiều bộ dữ liệu khác nhau ) và giải thích “đủ tốt”, nó vẫn được coi là một trong những thuật toán đầu tiên mà các nhà phân tích dữ liệu sử dụng để điều tra bất kỳ bộ dữ liệu mới nào. Giải thích (đơn giản và trực quan ) là một trong những đặc điểm chính của nó và làm cho nó thậm chí còn phổ biến hơn.

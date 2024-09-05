@@ -1,0 +1,5 @@
+K-mean là một thuật toán phổ biến được sử dụng rộng rãi để phân tích dữ liệu thực tế, bao gồm y tế, bán hàng, tài chính và nhiều hơn nữa. Một số ứng dụng tuyệt vời nhất của K-Mean là:
+
+- Thuật toán này được sử dụng để xây dựng các mô hình phát hiện đối tượng Yolo-v3,4,5, nổi tiếng trong Deep Learning.
+- Phân khúc khách hàng là một trong những ví dụ đáng kinh ngạc nhất sử dụng phương tiện K trực tiếp
+- Nhận dạng mẫu trong hình ảnh. Chúng tôi có thể cung cấp hàng triệu và hàng ty hình  ảnh vào thuật toán này. K-Mean có thể tách chúng thành số cụm mong muốn dựa trên nội dung của chúng.

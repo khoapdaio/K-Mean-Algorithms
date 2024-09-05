@@ -1,0 +1,3 @@
+Trên thế giới hiện này, hầu hết các mẫu dữ liệu đều không được ghi nhãn vì nó cần nguồn nhân lực và chi phí bổ sung. Để giải quyết thách thức này, các kỹ sư ML đã phát triển các kỹ thuật học tập không giám sát (Unsupervised Learning) để loại bỏ sự phục thuộc vào ghi nhãn dữ liệu. Một trong những phương pháp trong các kỹ thuật học tập không được giám sát là phân cụm, trong đó các máy tự động tạo thành các nhóm mẫu dữ liệu dựa trên sự tương đồng của chúng.
+
+Thuật toán K-Mean là một tỏng những thuật toán phân cụm được sử dụng rộng rãi nhất trong học máy. Nó tách các mẫu dữ liệu thành các cụm K riêng biệt và chúng ta sẽ tìm hiểu quy trình mà qua đó nó thực hiện việc đó.

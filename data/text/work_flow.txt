@@ -1,0 +1,25 @@
+Giả sử chúng ta có một số mẫu dữ liệu (X1, X2,…, Xn) và chúng ta muốn chia các mẫu dữ liệu này thành các cụm “K”. Chung ta có thể sử dụng thuật toán K-Mean để thực hiện nhiệm vụ này dựa trên logic lặp. Việc thực hiện đầy đủ có thể được tóm tắt trong năm bước:
+
+Bước 1: Khởi tạo các Centroids
+
+- Chọn số lượng cụm K: trước tiên, người dung cần xác định số lượng cụm K mà dữ liệu cần được phân chia
+- Khởi tạo centroids ban đầu: chọn ngẫu nhiên K điểm dữ liệu từ tập dữ liệu để làm centroids (tâm cụm) ban đầu. Mỗi centroid đại diện cho một cụm
+
+Bước 2: Gán các điểm dữ liệu vào cụm gần nhất
+
+- Tính khoảng cách: tính khoảng cách từ mỗi điểm dữ liệu đến tất cả các centroids. Có các cách tính khoảng các giữa 2 điểm phổ biến như hình dưới.
+- Gán cụm: gán mỗi điểm dữ liệu vào cụm tương ứng với centroid gần nhất. khoảng cách thường được tính bằng khảng cách Euclid.
+
+Bước 3: Cập nhật Centroids
+
+Tính lại Centroids: sau khi tất cả các điểm dữ liệu đã được gán vào cụm, tính toán lại vị trí của mỗi centroid bằng cách lấy trung bình các điểm dữ liệu trong mỗi cụm. Centroid mới sẽ là trung tâm của các điểm dữ liệu trong cụm đó.
+
+Bước 4: Lặp lại quá trình gán cụm và cập nhật centroids
+
+- Gán lại cụm: Với các centroids mới được tính toán, lại gán mỗi điểm dữ liệu vào cụm tương ứng với centroid gần nhất.
+- Cập nhật centroids: Tiếp tục tính lại các Centroids cho đến khi vị trí của các centroid không thay đổi hoặc thay đổi rất ít qua các vòng lặp liên tiếp
+
+Bước 5: Kết thúc và phân cụm
+
+- Dừng thuật toán: khi các centroids ổn định (không thay đổi qua các vòng lặp) hoặc sau một số vòng lặp nhất định, thuật toán sẽ dừng lại
+- Kết quả cuối cùng: Các cụm cuối cùng được xác định, mỗi điểm dữ liệu thuộc về một cụm cụ thể dựa trên centroids gần nhất của nó
