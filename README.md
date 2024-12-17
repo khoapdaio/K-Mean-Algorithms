@@ -1,6 +1,6 @@
 # K-Mean Algorithms
 
-Website demo: https://knn-algorithm-dbibnlwgfsnvbjdclzwpru.streamlit.app/
+Website demo: https://k-mean-algorithms-998cfn5ko5xfxfrtxsodhf.streamlit.app/
 
 <img alt="img.png" height="320" src="data/images/over_view_k_mean.png" width="320" />
 
